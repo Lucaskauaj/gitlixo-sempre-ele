@@ -22,7 +22,7 @@ function remover() {
 
 <style scoped>
 .mensagem {
-  border: 1px solid var(--cor-primaria);
+  border: 1px solid var(--cor-primaria, #42b983); /* Define um fallback caso a variável não exista */
   padding: 10px;
   margin-bottom: 8px;
   border-radius: 5px;
@@ -32,15 +32,22 @@ function remover() {
 
 button {
   margin-top: 5px;
-  padding: 4px 10px;
+  padding: 6px 12px; /* Ajuste no espaçamento interno */
   border: none;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-primaria, #42b983); /* Define um fallback */
   color: white;
-  border-radius: 3px;
+  border-radius: 5px; /* Bordas mais arredondadas */
   cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Adiciona transições suaves */
 }
 
 button:hover {
+  background-color: #379f72; /* Cor mais escura ao passar o mouse */
   opacity: 0.9;
+}
+
+button:focus {
+  outline: 2px solid #42b983; /* Adiciona um contorno ao focar */
+  outline-offset: 2px;
 }
 </style>

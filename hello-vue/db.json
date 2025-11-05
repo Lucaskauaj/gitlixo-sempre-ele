@@ -1,7 +1,7 @@
 {
   "mensagens": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Bem-vindo à API local",
       "conteudo": "Este é um exemplo de mensagem inicial.",
       "autor": "Sistema",
